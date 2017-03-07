@@ -17,7 +17,7 @@ public class ServletContextServer {
         SslSocketConnector ssl_connector = new SslSocketConnector();
         ssl_connector.setPort(9000);
         SslContextFactory cf = ssl_connector.getSslContextFactory();
-        cf.setKeyStorePath("D:/MyProjects/IdeaProjects/JettySSLDemo/tomcat.keystore");
+        cf.setKeyStorePath("D:\\MyProgram\\java\\JettySSLDemo\\tomcat.keystore");
         cf.setKeyStorePassword("123456");
         cf.setKeyManagerPassword("123456");
         server.addConnector(ssl_connector);
@@ -25,6 +25,7 @@ public class ServletContextServer {
         context.setContextPath("/");
         server.setHandler(context);
         context.addServlet(new ServletHolder(new HelloServlet()), "/HelloServlet");
+        context.addServlet(new ServletHolder(new FileDownloadServlet()), "/FileDownloadServlet");
         server.start();
         server.join();
     }

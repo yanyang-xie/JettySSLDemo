@@ -22,14 +22,12 @@
         </plugins>
     </build>
     <dependencies>
-
-
         <!-- Jetty -->
         <!-- https://mvnrepository.com/artifact/org.eclipse.jetty.aggregate/jetty-all -->
         <dependency>
             <groupId>org.eclipse.jetty.aggregate</groupId>
             <artifactId>jetty-all</artifactId>
-            <version>9.4.0.v20161208</version>
+            <version>8.0.4.v20111024</version>
         </dependency>
 
 
@@ -37,7 +35,7 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
-            <version>9.4.0.v20161208</version>
+            <version>8.0.4.v20111024</version>
         </dependency>
 
         <!-- JSP Support -->
